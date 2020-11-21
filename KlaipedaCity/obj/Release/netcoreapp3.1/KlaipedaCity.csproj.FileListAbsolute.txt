@@ -33,3 +33,4 @@ C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCit
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Release\netcoreapp3.1\KlaipedaCity.pdb
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Release\netcoreapp3.1\KlaipedaCity.genruntimeconfig.cache
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Release\netcoreapp3.1\KlaipedaCity.csproj.CopyComplete
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Release\netcoreapp3.1\KlaipedaCity.csprojAssemblyReference.cache

@@ -1,0 +1,11 @@
+﻿
+#klaipeda {
+    font-size: 146px;
+    font-family: Algerian;
+    color: darkgreen;
+}
+
+/*Not working for some reason*/
+.navbar {
+    color: crimson;
+}
