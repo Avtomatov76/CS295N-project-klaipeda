@@ -1,14 +1,71 @@
-﻿@{
-    ViewData["Title"] = "Quiz";
+﻿@model QuizVM
+
+@{
+    ViewData["Title"] = "Klaipeda Quiz";
 }
 
 <div class="container">
     <header class="jumbotron">
         <h1 class="display-4">Welcome to the Quiz Page!</h1>
-        <p>Test your knowledge of Klaipeda by responding to these questions.</p>
+        <p>Test your knowledge of Klaipeda by responding to these questions.  Please clikc on the "Submit" button to see the answers.</p>
     </header>
-    <main>
-
-    </main>
-
 </div>
+
+<body>
+    <div>
+        <h1 class="display-4">Klaipeda Quiz</h1>
+        <form method="post" class="container">
+
+            <label asp-for="UserAnswer1" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer1" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer2" class="control-label">What is the official language in Klaipeda?</label>
+            <input asp-for="UserAnswer2" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong2</b></p>
+            <br />
+            <p class="row">Klaipeda became a city in 1258.</p>
+            <div class="row">
+                <label for="true" class="col-1">True</label>
+                <input asp-for="UserAnswer3" id="true" type="radio" value="true" class="form-control col-1" />
+            </div>
+            <div class="row">
+                <label for="false" class="col-1">False</label>
+                <input asp-for="UserAnswer3" id="false" type="radio" value="false" class="form-control col-1 mb-3" />
+            </div>
+            <p><b>@Model?.RightOrWrong3</b></p>
+            <br />
+            <label asp-for="UserAnswer4" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer4" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer5" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer5" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer6" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer6" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer7" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer7" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer8" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer8" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer9" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer9" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+            <label asp-for="UserAnswer10" class="control-label mt-5">Which sea Klaipeda borders on?</label>
+            <input asp-for="UserAnswer10" type="text" class="form-control pb-1 mb-3" />
+            <p><b>@Model?.RightOrWrong1</b></p>
+            <br />
+
+            <input type="submit" class="form-control btn btn-success col-1 pl-3 pr-3" />
+
+        </form>
+    </div>
+</body>

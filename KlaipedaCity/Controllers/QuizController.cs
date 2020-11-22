@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using KlaipedaCity.Models;
 
 namespace KlaipedaCity.Controllers
 {
@@ -11,6 +12,13 @@ namespace KlaipedaCity.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Index(QuizVM quiz)
+        {
+            quiz.CheckAnswers();
+            return View(quiz);
         }
     }
 }
