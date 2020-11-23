@@ -39,18 +39,21 @@ namespace KlaipedaCity.Models
         public String RightOrWrong10 { get; set; }
 
         // Checks each answer got right or wrong; returns "Right" or "Wrong"
-        public void CheckAnswers() // NEEDS WORK
+        public void CheckAnswers() 
         {
-            RightOrWrong1 = UserAnswer1 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong2 = UserAnswer2 == "Lithuanian" ? "Right" : "Wrong";
-            RightOrWrong3 = UserAnswer3 == "true" ? "Right" : "Wrong";
-            RightOrWrong4 = UserAnswer4 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong5 = UserAnswer5 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong6 = UserAnswer6 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong7 = UserAnswer7 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong8 = UserAnswer8 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong9 = UserAnswer9 == "Baltic" ? "Right" : "Wrong";
-            RightOrWrong10 = UserAnswer10 == "Baltic" ? "Right" : "Wrong";
+            string [] answers = { "Baltic sea", "Lithuanian", "True", "Memel", "True", "Dane", "Amber", "98", "Jazz Festival", "Cepelinai" };
+            string response = " - Correct answer is: ";       
+
+            RightOrWrong1 = UserAnswer1?.ToLower() == "baltic sea" ? "Right" : "Wrong" + response + answers[0];
+            RightOrWrong2 = UserAnswer2?.ToLower() == "lithuanian" ? "Right" : "Wrong" + response + answers[1];
+            RightOrWrong3 = UserAnswer3 == "true" ? "Right" : "Wrong" + response + answers[2];
+            RightOrWrong4 = UserAnswer4 == "true" ? "Right" : "Wrong" + response + answers[3];
+            RightOrWrong5 = UserAnswer5 == "true" ? "Right" : "Wrong" + response + answers[4];
+            RightOrWrong6 = UserAnswer6?.ToLower() == "dane" ? "Right" : "Wrong" + response + answers[5];
+            RightOrWrong7 = UserAnswer7?.ToLower() == "amber" ? "Right" : "Wrong" + response + answers[6];
+            RightOrWrong8 = UserAnswer8 == "98" ? "Right" : "Wrong" + response + answers[7];
+            RightOrWrong9 = UserAnswer9?.ToLower() == "Jazz Festival" ? "Right" : "Wrong" + response + answers[8];
+            RightOrWrong10 = UserAnswer10?.ToLower() == "Cepelinai" ? "Right" : "Wrong" + response + answers[9];
         }
     }
 }

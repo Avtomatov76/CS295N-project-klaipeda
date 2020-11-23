@@ -7,64 +7,96 @@
 <div class="container">
     <header class="jumbotron">
         <h1 class="display-4">Welcome to the Quiz Page!</h1>
-        <p>Test your knowledge of Klaipeda by responding to these questions.  Please clikc on the "Submit" button to see the answers.</p>
+        <p>Test your knowledge of Klaipeda by responding to these questions.  Please clikc on the "Submit" button at the bottom of the page to see the results.</p>
     </header>
 </div>
 
 <body>
     <div>
-        <h1 class="display-4">Klaipeda Quiz</h1>
-        <form method="post" class="container">
-
-            <label asp-for="UserAnswer1" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer1" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+        <h1 class="display-4 ml-3 mt-5">Klaipeda Quiz</h1>
+        <form method="post" class="container pb-5">
+            <!-- Question #1 -->
+            <h5><label asp-for="UserAnswer1" class="control-label mt-5 text-success font-italic">1. Which sea Klaipeda borders on?</label></h5>
+            <input asp-for="UserAnswer1" type="text" class="form-control pb-1 mb-2 col-xl-6" />
+            <p class="mb-5"><b>@Model?.RightOrWrong1</b></p>
             <br />
-            <label asp-for="UserAnswer2" class="control-label">What is the official language in Klaipeda?</label>
-            <input asp-for="UserAnswer2" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong2</b></p>
+            <!-- Question #2 -->
+            <h5><label asp-for="UserAnswer2" class="control-label text-success font-italic">2. What is the official language in Klaipeda?</label></h5>
+            <input asp-for="UserAnswer2" type="text" class="form-control pb-1 mb-2 col-xl-6" />
+            <p class="mb-5"><b>@Model?.RightOrWrong2</b></p>
             <br />
-            <p class="row">Klaipeda became a city in 1258.</p>
+            <!-- Question #3 -->
+            <h5><p class="text-success font-italic">3. Klaipeda became a city in 1258.</p></h5>
             <div class="row">
-                <label for="true" class="col-1">True</label>
+                <label for="true" class="col-1 text-right text-success"><b>True</b></label>
                 <input asp-for="UserAnswer3" id="true" type="radio" value="true" class="form-control col-1" />
             </div>
             <div class="row">
-                <label for="false" class="col-1">False</label>
+                <label for="false" class="col-1 text-right text-danger"><b>False</b></label>
                 <input asp-for="UserAnswer3" id="false" type="radio" value="false" class="form-control col-1 mb-3" />
             </div>
             <p><b>@Model?.RightOrWrong3</b></p>
             <br />
-            <label asp-for="UserAnswer4" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer4" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #4 -->
+            <h5><p class="text-success font-italic">4. What was Klaipeda called before?</p></h5>
+            <div class="custom-checkbox">
+                <label><input asp-for="UserAnswer4" type="checkbox" value="false" class="ml-3 mr-3" />Revel</label>
+            </div>
+            <div class="custom-checkbox">
+                <label><input asp-for="UserAnswer4" type="checkbox" value="true" class="ml-3 mr-3" />Memel</label>
+            </div>
+            <div class="custom-checkbox">
+                <label><input asp-for="UserAnswer4" type="checkbox" value="false" class="ml-3 mr-3" />Tallinn</label>
+            </div>
+            <div class="custom-checkbox">
+                <label><input asp-for="UserAnswer4" type="checkbox" value="false" class="ml-3 mr-3" />Malmo</label>
+            </div>
+            <p><b>@Model?.RightOrWrong4</b></p>
             <br />
-            <label asp-for="UserAnswer5" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer5" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #5 -->
+            <h5><p class="text-success font-italic">5. Klaipeda county shares a border with Russia.</p></h5>
+            <div class="row">
+                <label for="true" class="col-1 text-right text-success"><b>True</b></label>
+                <input asp-for="UserAnswer5" id="true" type="radio" value="true" class="form-control col-1" />
+            </div>
+            <div class="row">
+                <label for="false" class="col-1 text-right text-danger"><b>False</b></label>
+                <input asp-for="UserAnswer5" id="false" type="radio" value="false" class="form-control col-1" />
+            </div>
+            <p><b>@Model?.RightOrWrong5</b></p>
             <br />
-            <label asp-for="UserAnswer6" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer6" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #6 -->
+            <h5><label asp-for="UserAnswer6" class="control-label mt-1 text-success font-italic">
+                6. What is the name of the river that flows through Klaipeda?</label></h5>
+            <input asp-for="UserAnswer6" type="text" class="form-control pb-1 mb-3 col-xl-6" />
+            <p><b>@Model?.RightOrWrong6</b></p>
             <br />
-            <label asp-for="UserAnswer7" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer7" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #7 -->
+            <h5><label asp-for="UserAnswer7" class="control-label mt-5 text-success font-italic">
+                7. Klaipeda region is famous for this material thats is used in locally crafted jewelry items.</label></h5>
+            <input asp-for="UserAnswer7" type="text" class="form-control pb-1 mb-3 col-xl-6" />
+            <p><b>@Model?.RightOrWrong7</b></p>
             <br />
-            <label asp-for="UserAnswer8" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer8" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #8 -->
+            <h5><label asp-for="UserAnswer8" class="control-label mt-5 text-success font-italic">
+                8. How long is Curonian spit peninsula (in kilometers)?</label></h5>
+            <input asp-for="UserAnswer8" type="number" class="form-control pb-1 mb-3 col-xl-6" />
+            <p><b>@Model?.RightOrWrong8</b></p>
             <br />
-            <label asp-for="UserAnswer9" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer9" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #9 -->
+            <h5><label asp-for="UserAnswer9" class="control-label mt-5 text-success font-italic">
+                9. What music festival does Klaipeda host annually?</label></h5>
+            <input asp-for="UserAnswer9" type="text" class="form-control pb-1 mb-3 col-xl-6" />
+            <p><b>@Model?.RightOrWrong9</b></p>
             <br />
-            <label asp-for="UserAnswer10" class="control-label mt-5">Which sea Klaipeda borders on?</label>
-            <input asp-for="UserAnswer10" type="text" class="form-control pb-1 mb-3" />
-            <p><b>@Model?.RightOrWrong1</b></p>
+            <!-- Question #10 -->
+            <h5><label asp-for="UserAnswer10" class="control-label mt-5 text-success font-italic">
+                10. What is the most popular dish in Klaipeda?</label></h5>
+            <input asp-for="UserAnswer10" type="text" class="form-control pb-1 mb-3 col-xl-6" />
+            <p><b>@Model?.RightOrWrong10</b></p>
             <br />
-
-            <input type="submit" class="form-control btn btn-success col-1 pl-3 pr-3" />
+            <!-- Submit Button -->
+            <input type="submit" class="form-control btn btn-success col-2 mt-5 mb-5 pl-3 pr-3" value="Check Answers" />
 
         </form>
     </div>

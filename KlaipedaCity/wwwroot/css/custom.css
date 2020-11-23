@@ -1,8 +1,17 @@
 ﻿
 #klaipeda {
-    font-size: 146px;
+    font-size: 126px;
     font-family: Algerian;
     color: darkgreen;
+}
+
+#true, #false {
+    transform: scale(.5);
+}
+
+#map {
+    height: 100px;
+    width: 120px;
 }
 
 /*Not working for some reason*/
