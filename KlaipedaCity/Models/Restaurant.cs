@@ -11,7 +11,7 @@ namespace KlaipedaCity.Models
 
         public string RestaurantName { get; set; }
 
-        public Cuisine CuisineName { get; } // property from Cuisine model
+        public Cuisine CuisineName { get; set; } // property from Cuisine model
 
         public string RestaurantDesc { get; set; }
 
