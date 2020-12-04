@@ -8,6 +8,9 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.EntityFrameworkCore;
+using KlaipedaCity.Models;
+using KlaipedaCity.Repos;
 
 namespace KlaipedaCity
 {
@@ -23,7 +26,13 @@ namespace KlaipedaCity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IRestaurantRepository, RestaurantRepository>(); // Repo interface and repo class
+            services.AddTransient<ICuisineRepository, CuisineRepository>();
+            services.AddTransient<IHotelRepository, HotelRepository>();
+            
             services.AddControllersWithViews();
+            services.AddDbContext<KlaipedaDbContext>(options =>
+                options.UseSqlServer(Configuration["Data:KlaipedaSite:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

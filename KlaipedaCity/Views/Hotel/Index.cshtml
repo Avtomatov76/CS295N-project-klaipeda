@@ -1,14 +1,84 @@
-﻿@{
+﻿@model List<Hotel>
+
+@{
     ViewData["Title"] = "Hotels";
 }
 
 <div class="container">
     <header class="jumbotron">
-        <h1 class="display-4">Welcome to the Hotels Page!</h1>
-        <p>Here you will find helpful suggestions for your accommodations.</p>
+        <div class="row">
+            <img src="~/Content/Images/klaipeda_coat_arms.png" /> <!--Experimenting-->
+            <div class="ml-4">
+                <h1 class="display-4">Welcome to the Hotels Page!</h1>
+                <p>Here you will find helpful suggestions for your accommodations in Klaipeda.</p>
+            </div>
+            
+        </div>
+        
+        
     </header>
-    <main>
-
-    </main>
-
 </div>
+
+<body>
+
+    <div class="text-muted ml-2 mt-2">
+        <h5>Search by restaurant name or cuisine type</h5>
+    </div>
+    <form method="post" class="container mb-5">
+        <div class="row p-2">
+            <input name="SearchParam" class="form-control col-md-2 mr-3 justify-content-center" placeholder="Type your entry here" />
+            <button type="submit" class="form-control btn btn-outline-success font-weight-bold col-1 mr-1">Search</button>
+            <a asp-action="Index" class="btn btn-outline-danger font-weight-bold col-1">Reset</a>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Rating</th>
+                <th scope="col">Price&#8727;</th>
+                <th scope="col">Link</th>
+                <th scope="col"></th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model != null)
+            {
+                foreach (Hotel hotel in Model)
+                {
+                    <tr>
+                        <th scope="row" class="text-muted">@hotel.HotelID</th>
+                        <td class="font-weight-bold">@hotel.HotelName</td>
+                        <td class="text-muted">@hotel.HotelAddress</td>
+                        <td>@hotel.HotelRating&#9733;</td>
+                        <td>&#36;@hotel.HotelPrice</td>
+                        <td class="btn-link">@hotel.HotelLink</td>
+                        <td>
+                            <a class="btn btn-outline-success" asp-action="Edit"
+                               asp-route-id="@hotel.HotelID">Edit</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-danger" asp-action="Delete"
+                               asp-route-id="@hotel.HotelID">Delete</a>
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+
+    <hr />
+    <div class="font-italic text-info mb-2">
+        <p>&emsp;&#8727;&nbsp;"Price" refers to an average cost for one night stay</p>
+    </div>
+    <div>
+        <a class="btn btn-success font-weight-bold col-sm-2 col-md-2 mt-5 mb-5 pt-2 pb-2" asp-action="Add">Add Hotel</a>
+    </div>
+
+</body>

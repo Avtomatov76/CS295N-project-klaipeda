@@ -1,0 +1,47 @@
+﻿@model Hotel
+
+@{
+    string title = ViewBag.Action + " Hotel";
+    ViewBag.Title = title;
+}
+
+<div class="container">
+    <h5 class="mt-5">You can update your accommodations info using this form.</h5>
+    <form asp-action="Edit" method="post" class="mt-5 mb-5">
+        <div class="card border-dark">
+            <div class="card-header text-success"><h4>Please Fill out This Form</h4></div>
+            <div class="card-body">
+                <!-- hidden ID property -->
+                <input type="hidden" asp-for="HotelID" />
+
+                <div class="row mb-2">
+                    <label asp-for="HotelName" class="control-label col-sm-2 col-md-2"><strong>Hotel</strong></label>
+                    <input asp-for="HotelName" class="form-control col-sm-8 col-md-6" />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="HotelAddress" class="control-label col-sm-2 col-md-2"><strong>Address</strong></label>
+                    <input asp-for="HotelAddress" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="HotelRating" class="control-label col-sm-2 col-md-2"><strong>Rating</strong></label>
+                    <input asp-for="HotelRating" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="HotelPrice" class="control-label col-sm-2 col-md-2"><strong>Price</strong></label>
+                    <input asp-for="HotelPrice" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-5">
+                    <label asp-for="HotelLink" class="control-label col-sm-2 col-md-2"><strong>Web Link</strong></label>
+                    <input asp-for="HotelLink" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+                <!-- Buttons -->
+                <button type="submit" class="btn btn-outline-success font-weight-bold">Update</button>
+                <a class="btn btn-outline-danger font-weight-bold" asp-action="Index">Cancel</a>
+            </div>
+        </div>
+    </form>
+</div>

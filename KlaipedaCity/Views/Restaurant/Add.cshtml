@@ -1,0 +1,51 @@
+﻿@model Restaurant
+
+@{
+    ViewData["Title"] = "AddRestaurant";
+}
+
+
+<div class="container">
+    <h5 class="mt-5">You can add your favorite restaurant by filling out the form below</h5>
+    <form method="post" class="mt-5 mb-5">
+        <div class="card border-dark">
+            <div class="card-header text-success"><h4>Please Fill out This Form</h4></div>
+            <div class="card-body">
+                <div class="row mb-2">
+                    <label asp-for="RestaurantName" class="control-label col-sm-2 col-md-2"><strong>Restaurant</strong></label>
+                    <input asp-for="RestaurantName" class="form-control col-sm-8 col-md-6" />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="CuisineName.CuisineName" class="control-label col-sm-2 col-md-2"><strong>Type of Cuisine</strong></label>
+                    <input asp-for="CuisineName.CuisineName" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="RestaurantDesc" class="control-label col-sm-2 col-md-2"><strong>Description</strong></label>
+                    <input asp-for="RestaurantDesc" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="RestaurantRating" class="control-label col-sm-2 col-md-2"><strong>Rating</strong></label>
+                    <input asp-for="RestaurantRating" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="RestaurantPrice" class="control-label col-sm-2 col-md-2"><strong>Price Range</strong></label>
+                    <input asp-for="RestaurantPrice" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-5">
+                    <label asp-for="RestaurantLink" class="control-label col-sm-2 col-md-2"><strong>Web Link</strong></label>
+                    <input asp-for="RestaurantLink" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div>
+                    <button type="submit" class="form-control btn btn-outline-success font-weight-bold col-1 mr-1">Add</button>
+                    <a asp-action="Index" class="btn btn-outline-danger font-weight-bold col-1">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

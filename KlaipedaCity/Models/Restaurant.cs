@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations;
 
 namespace KlaipedaCity.Models
 {
     public class Restaurant
     {
+        //public IEnumerable<Restaurant> GetRestaurants { get; set; }
+
         public int RestaurantID { get; set; } // primary key
 
         public string RestaurantName { get; set; }
@@ -20,5 +23,6 @@ namespace KlaipedaCity.Models
         public int RestaurantPrice { get; set; }
 
         public string RestaurantLink { get; set; }
+
     }
 }

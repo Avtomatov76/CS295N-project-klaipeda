@@ -1,0 +1,56 @@
+﻿@model Hotel
+
+@{ 
+    ViewData["Title"] = "AddHotel";
+}
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="row">
+            <img src="~/Content/Images/klaipeda_coat_arms.png" /> <!--Experimenting-->
+            <div class="ml-4">
+                <h1>You can add your favorite hotel by filling out the form below</h1>
+            </div>
+        </div>
+    </header>
+</div>
+
+<div class="container">
+    <form method="post" class="mt-5 mb-5">
+
+        <div class="card border-dark">
+            <div class="card-header text-success"><h4>Please Fill out This Form</h4></div>
+            <div class="card-body">
+                <div class="row mb-2">
+                    <label asp-for="HotelName" class="control-label col-sm-2 col-md-2"><strong>Hotel Name</strong></label>
+                    <input asp-for="HotelName" class="form-control col-sm-8 col-md-6" />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="HotelAddress" class="control-label col-sm-2 col-md-2"><strong>Address</strong></label>
+                    <input asp-for="HotelAddress" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="HotelRating" class="control-label col-sm-2 col-md-2"><strong>Rating</strong></label>
+                    <input asp-for="HotelRating" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-2">
+                    <label asp-for="HotelPrice" class="control-label col-sm-2 col-md-2"><strong>Price Range</strong></label>
+                    <input asp-for="HotelPrice" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div class="row mb-5">
+                    <label asp-for="HotelLink" class="control-label col-sm-2 col-md-2"><strong>Web Link</strong></label>
+                    <input asp-for="HotelLink" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                </div>
+
+                <div>
+                    <button type="submit" class="form-control btn btn-outline-success font-weight-bold col-1 mr-1">Add</button>
+                    <a asp-action="Index" class="btn btn-outline-danger font-weight-bold col-1">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
