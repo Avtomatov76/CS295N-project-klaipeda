@@ -1,8 +1,32 @@
 ﻿
 #klaipeda {
-    font-size: 126px;
+    font-size: 100px;
     font-family: Algerian;
-    color: darkgreen;
+    color: green;
+}
+
+.jumbotron {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 500%), url(../Content/Images/Gallery/klaipedabeach.jpg);
+    background-size: cover;
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.jumbo_title {
+    font-family: Algerian;
+    color: green;
+    font-size: 75px;
+    text-align: center;
+}
+
+.coat_arms {
+    width: 150px;
+    height: 160px;
+}
+
+.figure {
+    background-color: aliceblue;
 }
 
 #true, #false {
@@ -10,11 +34,7 @@
 }
 
 #map {
-    height: 100px;
-    width: 120px;
+    height: 80px;
+    width: 100px;
 }
 
-/*Not working for some reason*/
-.navbar {
-    color: crimson;
-}

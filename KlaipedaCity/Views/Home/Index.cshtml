@@ -3,16 +3,35 @@
 }
 
 <div class="container">
-    <div class="row pt-3 pb-3">
-        <div class="col-xl-2">
-            <img src="~/Content/Images/klaipeda_coat_arms.png" />
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-xl-2">
+                    <img class="coat_arms" src="~/Content/Images/klaipeda_coat_arms.png" />
+                </div>
+                <div class="text-center col-xl-8">
+                    <h1 id="klaipeda">KLAIPEDA</h1>
+                </div>
+            </div>
         </div>
-        <div class="col-xl-8">
-            <h1 class="display-1" id="klaipeda">KLAIPEDA</h1>
+    </header>
+</div>
+
+<body>
+
+    <hr class="m-3" />
+    <div class="row">
+        <div class="col-lg-8 ml-5 text-muted">
+            <p class="lead">
+                (Lithuanian pronunciation: [ˈkɫɐɪˑpʲeːdɐ];
+                German: Memel or Mimmelburg, Samogitian: Klaipieda) is a city in Lithuania on the Baltic Sea coast.
+                It is the third largest city in Lithuania and the capital of Klaipėda County.<br />
+            </p>
+            <p class="card-text"><small class="text-muted">-- Wikipedia</small></p>
         </div>
-        <div class="col-xl-2 pt-xl-4">
+        <div class="col-lg-2 text-right justify-content-end">
             <figure>
-                <img src="~/Content/Images/ltu_map.png" id="map"/>
+                <img src="~/Content/Images/ltu_map.png" id="map" />
                 <figcaption class="figure-caption text-right">
                     <a href="https://www.google.com/maps/place/Lithuania/"
                        class="stretched-link">Map</a>
@@ -20,31 +39,15 @@
             </figure>
         </div>
     </div>
-</div>
-
-<!-- Local (Klaipeda) info display -->
-<div>
-</div>
-
-<body>
-    <figure class="figure mt-5">
-        <img src="~/Content/Images/klaipeda_city.jpg" class="figure-img img-fluid rounded" alt="Klaipeda city" />
-        <figcaption class="figure-caption text-right">Photo by Jessica Kalashnikov &#169;</figcaption>
-    </figure>
-
-    <div class="container mt-5 mb-5">
+    <hr class="ml-3 mr-3 mb-4" />
+    <div class="container mt-3">
         <div class="row">
             <div class="col-xl-8">
-                <div class="card border-success">
-                    <div class="card-header"><h5>Brief History of Klaipeda</h5></div>
+                <div class="card border-success mb-2">
+                    <div class="card-header text-white bg-success"><h5 class="pt-1">Brief History of Klaipeda</h5></div>
                     <div class="card-body">
-
-                        <p class="card-text font-weight-lighter">
-                            Klaipėda (Lithuanian pronunciation: [ˈkɫɐɪˑpʲeːdɐ];
-                            German: Memel or Mimmelburg, Samogitian: Klaipieda) is a city in Lithuania on the Baltic Sea coast.
-                            It is the third largest city in Lithuania and the capital of Klaipėda County.<br />
-                            <br />
-                            The city has a complex recorded history, partially due to the combined regional importance of
+                        <p class="lead card-text font-weight-lighter m-2">
+                            The city [Klaipeda] has a complex recorded history, partially due to the combined regional importance of
                             the usually ice-free Port of Klaipėda at the mouth of the Akmena-Danė River. It was controlled
                             by successive German states until the 1919 Treaty of Versailles. As a result of the 1923
                             Klaipėda Revolt it was annexed by Lithuania and has remained with Lithuania to this day,
@@ -55,14 +58,14 @@
                             inhabitants (as of 2019) in Klaipėda city and Klaipėda district municipalities combined.[4] Popular
                             seaside resorts found close to Klaipėda are Nida to the south on the Curonian Spit and Palanga to the north.
                         </p>
-                        <p class="card-text pb-1"><small class="text-muted font-italic">Wikipedia (excerpt)</small></p>
-                        <a href="https://en.wikipedia.org/wiki/Klaip%C4%97da" class="stretched-link">Full article</a><br />
+                        <p class="card-text pb-1 ml-2"><small class="text-muted font-italic">Wikipedia (excerpt)</small></p>
+                        <a href="https://en.wikipedia.org/wiki/Klaip%C4%97da" class="stretched-link ml-2">Full article</a>
                     </div>
                 </div>
             </div>
             <div class="col-xl-4">
                 <div class="card border-success">
-                    <div class="card-header"><h5>Videos of Klaipeda</h5></div>
+                    <div class="card-header text-white bg-success"><h5 class="pt-1">Videos of Klaipeda</h5></div>
                     <div class="card-body">
                         <br />
                         <div class="embed-responsive embed-responsive-16by9">
@@ -70,7 +73,7 @@
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <p class="card-text"><small class="text-muted">Klaipeda in timelapse</small></p>
-                        <br />
+
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/l0528ll1C5I" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -82,12 +85,19 @@
         </div>
     </div>
 
+    <div class="card m-3">
+        <figure class="figure mt-2 ml-3 mr-3 mb-5">
+            <img src="~/Content/Images/klaipeda_city.jpg" class="figure-img img-fluid rounded" alt="Klaipeda city" />
+            <figcaption class="figure-caption text-right">Photo by Jessica Kalashnikov &#169;</figcaption>
+        </figure>
+    </div>
+
     <div class="container mb-5">
         <div class="card border-success">
-            <div class="card-header"><h5>Useful Links</h5></div>
+            <div class="card-header text-white bg-success"><h5>Useful Links</h5></div>
             <div class="card-body">
                 <ul class="list-group">
-                    <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/History_of_Lithuania" class="stretched-link">History of Lithuania</a></li>
+                    <li class="list-group-item"><a href="https://www.shutterstock.com/search/klaipeda" class="stretched-link">Klaipeda in Pictures</a></li>
                     <li class="list-group-item"><a href="https://www.klaipeda.lt/en/municipality/304" class="stretched-link">Klaipeda Municipality</a></li>
                     <li class="list-group-item"><a href="https://en.wikipedia.org/wiki/Culture_of_Lithuania" class="stretched-link">Culture of Lithuania</a></li>
                     <li class="list-group-item"><a href="https://klaipeda.diena.lt/" class="stretched-link">Klaipeda News</a></li>

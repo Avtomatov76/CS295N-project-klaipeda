@@ -3,80 +3,105 @@
 
 @{
     ViewData["Title"] = "Restaurants";
-    //Layout = "~/Views/Shared/_RestAndHotelLayout.cshtml";
 }
+
+<head>
+    <link rel="stylesheet" href="~/css/custom.css" />
+</head>
 
 <div class="container">
     <header class="jumbotron">
-
-        <h1 class="display-4">Places to Eat in Klaipeda</h1>
-        <p>Here you will find helpful suggestions for your outings in Klaipeda as far as food goes.</p>
-        <img src="~/Content/Images/Gallery/bar.jpg" class="figure-img img-fluid rounded" alt="Klaipeda city" /> <!--Experimenting-->
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-xl-2">
+                    <img class="coat_arms" src="~/Content/Images/klaipeda_coat_arms.png" />
+                </div>
+                <div class="text-left col-xl-8 ml-5">
+                    <h1 class="jumbo_title">Places to Eat</h1>
+                </div>
+            </div>
+        </div>
     </header>
 </div>
 
 <body>
 
-    <div class="text-muted ml-2 mt-2">
+    <hr class="m-3"/>
+    <div class="ml-3 mr-3 mt-3 mb-5 text-muted">
+        <p class="lead">
+            Here you will find helpful suggestions for the places to eat in Klaipeda.  This list contains
+            various eateries that are added and updated by locals and visitors who have tried them before 
+            and thus included them in the list as their personal recommendations.
+        </p>
+        <p class="lead">
+            If you would like to add your own recommendation, please click on the "Add Restaurant" button below.
+            Similarly, you can easily update any part of a restaurant's information or delete an entry by clicking
+            either "Edit" or "Delete" buttons corresponding to each individual entry.
+        </p>
+    </div>
+    <hr class="m-3"/>
+
+    <div class="text-muted ml-3 mt-2">
         <h5>Search by restaurant name or cuisine type</h5>
     </div>
     <form method="post" class="container mb-5">
         <div class="row p-2">
-            <input name="SearchParam" class="form-control col-md-2 mr-3 justify-content-center" placeholder="Type your entry here" />
+            <input name="SearchParam" class="form-control col-md-2 mr-3 justify-content-center" />
             <button type="submit" class="form-control btn btn-outline-success font-weight-bold col-1 mr-1">Search</button>
             <a asp-action="Index" class="btn btn-outline-danger font-weight-bold col-1">Reset</a>
         </div>
     </form>
 
-    <table class="table table-striped">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Cuisine</th>
-                <th scope="col">Description</th>
-                <th scope="col" class="text-justify">Rating</th>
-                <th scope="col" class="justify-content-center">Price&#8727;</th>
-                <th scope="col" class="justify-content-center">Link</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
-            </tr>
-        </thead>
-        <tbody>
+    <div class="ml-2 mr-2">
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Cuisine</th>
+                    <th scope="col">Description</th>
+                    <th scope="col" class="text-justify">Rating</th>
+                    <th scope="col" class="justify-content-center">Price&#8727;</th>
+                    <th scope="col" class="justify-content-center">Link</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
 
-            @if (Model != null)
-            {
-                foreach (Restaurant restaurant in Model)
+                @if (Model != null)
                 {
-                    <tr>
-                        <th scope="row" class="text-muted">@restaurant.RestaurantID</th>
-                        <td class="font-weight-bold">@restaurant.RestaurantName</td>
-                        <td class="text-muted font-italic">@restaurant.CuisineName.CuisineName</td>
-                        <td class="text-muted">@restaurant.RestaurantDesc</td>
-                        <td>@restaurant.RestaurantRating&#9733;</td>
-                        <td>&#36;@restaurant.RestaurantPrice</td>
-                        <td class="btn-link">@restaurant.RestaurantLink</td>
-                        <td>
-                            <a class="btn btn-outline-success" asp-action="Edit"
-                               asp-route-id="@restaurant.RestaurantID">Edit</a>
-                        </td>
-                        <td>
-                            <a class="btn btn-outline-danger" asp-action="Delete"
-                               asp-route-id="@restaurant.RestaurantID">Delete</a>
-                        </td>
-                    </tr>
+                    foreach (Restaurant restaurant in Model)
+                    {
+                        <tr>
+                            <th scope="row" class="text-muted">@restaurant.RestaurantID</th>
+                            <td class="font-weight-bold">@restaurant.RestaurantName</td>
+                            <td class="text-muted font-italic">@restaurant.CuisineName.CuisineName</td>
+                            <td class="text-muted">@restaurant.RestaurantDesc</td>
+                            <td>@restaurant.RestaurantRating&#9733;</td>
+                            <td>&#36;@restaurant.RestaurantPrice</td>
+                            <td class="text-info">@restaurant.RestaurantLink</td>
+                            <td>
+                                <a class="btn btn-outline-success" asp-action="Edit"
+                                   asp-route-id="@restaurant.RestaurantID">Edit</a>
+                            </td>
+                            <td>
+                                <a class="btn btn-outline-danger" asp-action="Delete"
+                                   asp-route-id="@restaurant.RestaurantID">Delete</a>
+                            </td>
+                        </tr>
+                    }
                 }
-            }
 
-        </tbody>
-    </table>
-
+            </tbody>
+        </table>
+    </div>
     <hr />
     <div class="font-italic text-info mb-2">
         <p>&emsp;&#8727;&nbsp;"Price" refers to an average bill for one person</p>
     </div>
     <div>
-        <a class="btn btn-success font-weight-bold col-sm-2 col-md-2 mt-5 mb-5 pt-2 pb-2" asp-action="Add">Add A Restaurant</a>
+        <a class="btn btn-success font-weight-bold col-sm-2 col-md-2 mt-5 mb-5 pt-2 pb-2" asp-action="Add">Add Restaurant</a>
     </div>
 
 </body>

@@ -8,21 +8,36 @@ namespace KlaipedaCity.Repos
 {
     public class CuisineRepository : ICuisineRepository
     {
-        public IQueryable<Cuisine> Cuisines => throw new NotImplementedException();
+        private KlaipedaDbContext context;
+
+        // Constructor
+        public CuisineRepository(KlaipedaDbContext c)
+        {
+            context = c;
+        }
+
+        public IQueryable<Cuisine> Cuisines { get { return context.Cuisines; } }
 
         public void CreateCuisine(Cuisine cuisine)
         {
-            throw new NotImplementedException();
+            context.Add(cuisine);
+            context.SaveChanges();
         }
 
         public void DeleteCuisine(Cuisine cuisine)
         {
-            throw new NotImplementedException();
+            var cuisineToDel = context.Cuisines.Find(cuisine.CuisineID);
+            context.Remove(cuisineToDel);
+            context.SaveChanges();
         }
 
         public void UpdateCuisine(Cuisine cuisine)
         {
-            throw new NotImplementedException();
+            var oldCuisine = context.Cuisines.Find(cuisine.CuisineID);
+            // Updating individual values
+            oldCuisine.CuisineID = cuisine.CuisineID;
+            oldCuisine.CuisineName = cuisine.CuisineName;
+            context.SaveChanges();
         }
     }
 }

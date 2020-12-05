@@ -75,12 +75,15 @@ C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCit
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.csproj.CoreCompileInputs.cache
-C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_RestAndHotelLayout.cshtml.g.cs
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Restaurant\Add.cshtml.g.cs
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Restaurant\Edit.cshtml.g.cs
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Restaurant\Delete.cshtml.g.cs
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Add.cshtml.g.cs
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Delete.cshtml.g.cs
 C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Hotel\Edit.cshtml.g.cs
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\KlaipedaCity - Web Deploy\profile.arm.json
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.KlaipedaCity - Web Deploy.json
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\KlaipedaCity - Web Deploy\mssql1.arm.json
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.csproj.CoreCompileInputs.cache
+C:\Users\Ruslan\Documents\FALL2020\CS 295N\TERM PROJECT\KlaipedaCity\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.MvcApplicationPartsAssemblyInfo.cache

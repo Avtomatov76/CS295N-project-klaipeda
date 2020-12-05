@@ -38,16 +38,16 @@ namespace KlaipedaCity.Controllers
         {
             restaurants = repo.Restaurants.ToList(); 
 
-            searchParam.ToLower(); 
-
             if (searchParam != null && cTypes.Contains(searchParam))
             {
+                searchParam.ToLower();
                 var cuisineType = repo.Restaurants.Where(
                     r => r.CuisineName.CuisineName.ToLower() == searchParam).ToList();
                 return View(cuisineType);
             }
             else if (searchParam != null)
             {
+                searchParam.ToLower();
                 //var restaurants = repo.Restaurants.Where(r => r.RestaurantName == restaurantName).ToList(); // exact match
                 var restaurantSearch = repo.Restaurants.Where(
                     r => r.RestaurantName.ToLower().Contains(searchParam)).ToList(); // more generic match

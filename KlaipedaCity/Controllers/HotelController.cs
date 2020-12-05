@@ -31,11 +31,17 @@ namespace KlaipedaCity.Controllers
         [HttpPost]
         public IActionResult Index(string searchParam)
         {
-            hotels = repo.Hotels.ToList(); 
+            hotels = repo.Hotels.ToList();
+            bool result = false;
+            int rating = 0; // will be used to search by rating if searchParam is not null
 
-            searchParam.ToLower();
-            int rating = 0;
-            bool result = Int32.TryParse(searchParam, out rating); // Checking if user entered a number to search by rating
+            if (searchParam != null)
+            {
+                searchParam.ToLower();
+                result = Int32.TryParse(searchParam, out rating); // Checking if user entered a number to search by rating
+            }
+            else
+                return View(hotels);
 
             if (searchParam != null && result) // searching by hotel rating
             {

@@ -52,8 +52,8 @@ namespace KlaipedaCity.Models
             RightOrWrong6 = UserAnswer6?.ToLower() == "dane" ? "Right" : "Wrong" + response + answers[5];
             RightOrWrong7 = UserAnswer7?.ToLower() == "amber" ? "Right" : "Wrong" + response + answers[6];
             RightOrWrong8 = UserAnswer8 == "98" ? "Right" : "Wrong" + response + answers[7];
-            RightOrWrong9 = UserAnswer9?.ToLower() == "Jazz Festival" ? "Right" : "Wrong" + response + answers[8];
-            RightOrWrong10 = UserAnswer10?.ToLower() == "Cepelinai" ? "Right" : "Wrong" + response + answers[9];
+            RightOrWrong9 = UserAnswer9?.ToLower() == "jazz festival" ? "Right" : "Wrong" + response + answers[8];
+            RightOrWrong10 = UserAnswer10?.ToLower() == "cepelinai" ? "Right" : "Wrong" + response + answers[9];
         }
     }
 }

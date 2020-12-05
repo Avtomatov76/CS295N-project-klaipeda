@@ -10,7 +10,7 @@ namespace KlaipedaCity.Repos
     {
         private KlaipedaDbContext context;
 
-        //Constructor
+        // Constructor
         public HotelRepository(KlaipedaDbContext c)
         {
             context = c;
