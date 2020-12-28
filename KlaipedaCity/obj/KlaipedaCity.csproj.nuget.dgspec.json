@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\KlaipedaCity\\KlaipedaCity.csproj": {}
+    "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\KlaipedaCity\\KlaipedaCity.csproj": {
+    "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\KlaipedaCity\\KlaipedaCity.csproj",
+        "projectUniqueName": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
         "projectName": "KlaipedaCity",
-        "projectPath": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\KlaipedaCity\\KlaipedaCity.csproj",
+        "projectPath": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
         "packagesPath": "C:\\Users\\Ruslan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\KlaipedaCity\\obj\\",
+        "outputPath": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Ruslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
