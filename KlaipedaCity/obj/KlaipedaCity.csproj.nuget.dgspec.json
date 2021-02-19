@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {}
+    "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {
+    "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
+        "projectUniqueName": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
         "projectName": "KlaipedaCity",
-        "projectPath": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
-        "packagesPath": "C:\\Users\\Ruslan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ruslan\\Documents\\FALL2020\\CS 295N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\obj\\",
+        "projectPath": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
+        "packagesPath": "C:\\Users\\rjand\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ruslan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rjand\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,6 +26,7 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -37,6 +38,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -77,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
