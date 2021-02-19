@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -33,6 +34,13 @@ namespace KlaipedaCity
             services.AddControllersWithViews();
             services.AddDbContext<KlaipedaDbContext>(options =>
                 options.UseSqlServer(Configuration["Data:KlaipedaSite:ConnectionString"]));
+
+            // Adding Identity
+            services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<KlaipedaDbContext>()
+                .AddDefaultTokenProviders();
+
+            // ADD: code for useing caching management strategies
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,7 +61,8 @@ namespace KlaipedaCity
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthentication(); // setting up Authentication
+            app.UseAuthorization(); // setting up Authorization
 
             app.UseEndpoints(endpoints =>
             {
@@ -61,6 +70,8 @@ namespace KlaipedaCity
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            // ADD: Security mitigation code below
         }
     }
 }
