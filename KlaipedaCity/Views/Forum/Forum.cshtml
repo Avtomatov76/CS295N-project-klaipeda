@@ -1,0 +1,32 @@
+﻿@model ForumPost
+@{
+    ViewData["Title"] = "Post to Forum";
+}
+<div class="container">
+    <header class="jumbotron">
+        <h1 class="display-4">Post to Forum</h1>
+        <p>Use this form to post to Forum</p>
+    </header>
+
+    <main>
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <form asp-action="Forum" method="post">
+
+            <div class="row mb-2">
+                <label asp-for="Subject" class="control-label col-sm-2 col-md-2"><strong>Subject</strong></label>
+                <input asp-for="Subject" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+
+            <div class="row mb-2">
+                <label asp-for="ForumPostBody" class="control-label col-sm-2 col-md-2"><strong>Post Body</strong></label>
+                <input asp-for="ForumPostBody" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                <span asp-validation-for="ForumPostBody" class="text-danger"></span>
+            </div>
+
+            <div>
+                <button type="submit" class="btn btn-primary col-sm-2 col-md-2 mt-3 pt-2 pb-2"><strong>Submit</strong></button>
+            </div>
+        </form>
+    </main>
+</div>

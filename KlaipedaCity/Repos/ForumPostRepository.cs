@@ -11,9 +11,9 @@ namespace KlaipedaCity.Repos
         private KlaipedaDbContext context;
 
         // constructor
-        public ForumPostRepository(KlaipedaDbContext context)
+        public ForumPostRepository(KlaipedaDbContext c)
         {
-            this.context = context;
+            context = c;
         }
 
         public IQueryable<ForumPost> ForumPosts

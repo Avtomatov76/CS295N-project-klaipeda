@@ -21,7 +21,8 @@ namespace KlaipedaCity.Repos
         {
             get
             {
-                return context.Restaurants.Include(r => r.CuisineName); 
+                return context.Restaurants.Include(r => r.CuisineName)
+                        .Include(r => r.Sender); // to see the sender info
             }
         }
 
@@ -33,7 +34,7 @@ namespace KlaipedaCity.Repos
 
         public void UpdateRestaurant(Restaurant r)
         {
-            var updRestaurant = context.Restaurants.Include("CuisineName") // use navigational property here NOT table name...
+            var updRestaurant = context.Restaurants.Include("CuisineName").Include("Sender") // use navigational property here NOT table name...
                 .Where(re => re.RestaurantID == r.RestaurantID).FirstOrDefault();
             // updating individual values 
             updRestaurant.RestaurantName = r.RestaurantName;
@@ -42,6 +43,7 @@ namespace KlaipedaCity.Repos
             updRestaurant.RestaurantRating = r.RestaurantRating;
             updRestaurant.RestaurantPrice = r.RestaurantPrice;
             updRestaurant.RestaurantLink = r.RestaurantLink;
+            updRestaurant.Sender.SenderName = r.Sender.SenderName;
 
             context.SaveChanges();
         }

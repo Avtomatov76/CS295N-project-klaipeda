@@ -1,0 +1,57 @@
+﻿@model List<ForumPost>
+
+@{
+    ViewData["Title"] = "Forum Posts";
+}
+<!-- Have to change a bunch of stuff below -->
+<h1 class="display-4 mb-3">Filter Posts</h1>
+<form method="post" class="container">
+    <h5>Enter The Name of Sender:</h5>
+    <div class="row p-2">
+        <label for="Sender" class="custom-control-label col-md-1">Name of Sender</label>
+        <input name="Sender" class="form-control col-md-6" placeholder="Name" />
+    </div>
+    <h5>Enter Date Sent:</h5>
+    <div class="row p-2">
+        <label for="DateSent" class="custom-control-label col-md-1">Date Sent</label>
+        <input name="DateSent" class="form-control col-md-6" placeholder="mm/dd/yyyy" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-primary col-1 mr-2 mb-3">Submit</button>
+        <a asp-action="ForumPosts" class="btn btn-danger col-1 mb-3">Reset</a>
+    </div>
+</form>
+
+@foreach (ForumPost post in Model)
+{
+    <p>
+        <strong class="m-3">Post Author:</strong>
+        @post.Sender.SenderName<br />
+        <strong class="m-3">Subject:</strong>
+        @post.Subject<br />
+        <strong class="m-3">Message Body:</strong>
+        @post.ForumPostBody<br />
+        <strong class="m-3">Date Sent:</strong>
+        @post.DateSent<br />
+        <br />
+    </p>
+    @if (post.Comments.Count != 0)
+    {
+        <h3>Replies</h3>
+
+        @foreach (Comment comment in post.Comments)
+        {
+            <p>
+                <strong class="m-3">Comment:</strong>
+                @comment.CommentBody<br />
+                <strong class="m-3">By:</strong>
+                @comment.CommentAuthor.UserName<br /> <!--Places a username of the reply author here  -->
+                <strong class="m-3">Date:</strong>
+                @comment.CommentDate.Date<br />
+            </p>
+        }
+
+    }
+    <a asp-action="Comment" asp-route-messageId="@post.ForumPostID" class="btn btn-secondary col-3 mb-5">Add A Comment</a>
+
+}

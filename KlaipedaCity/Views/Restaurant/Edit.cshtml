@@ -38,10 +38,17 @@
                     <input asp-for="RestaurantPrice" class="form-control col-sm-8 col-md-6 mb-8" /><br />
                 </div>
 
-                <div class="row mb-5">
+                <div class="row mb-2">
                     <label asp-for="RestaurantLink" class="control-label col-sm-2 col-md-2"><strong>Web Link</strong></label>
                     <input asp-for="RestaurantLink" class="form-control col-sm-8 col-md-6 mb-8" /><br />
                 </div>
+
+                <div class="row mb-5">
+                    <label asp-for="Sender.SenderName" class="control-label col-sm-2 col-md-2"><strong>Entry By</strong></label> <!--added new field for the entry's author-->
+                    <input asp-for="Sender.SenderName" class="form-control col-sm-8 col-md-6 mb-8 mr-3" /><br />
+                    <span asp-validation-for="Sender.SenderName" class="text-danger"></span>
+                </div>
+
                 <!-- Buttons -->
                 <button type="submit" class="btn btn-outline-success font-weight-bold">Update</button>
                 <a class="btn btn-outline-danger font-weight-bold" asp-action="Index">Cancel</a>

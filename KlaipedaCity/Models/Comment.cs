@@ -14,7 +14,7 @@ namespace KlaipedaCity.Models
         [Required]
         public string CommentBody { get; set; }
 
-        public DateTime ReplyDate { get; set; }
+        public DateTime CommentDate { get; set; }
 
         public AppUser CommentAuthor { get; set; }
     }

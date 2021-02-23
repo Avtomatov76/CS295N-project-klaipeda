@@ -13,7 +13,7 @@ namespace KlaipedaCity.Models
         public int RestaurantID { get; set; } // primary key
 
         [Required(ErrorMessage = "Please enter a restaurant name.")]
-        [StringLength(35, MinimumLength = 2, ErrorMessage = "The name should be between 2 and 55 characters long.")]
+        [StringLength(55, MinimumLength = 2, ErrorMessage = "The name should be between 2 and 55 characters long.")]
         public string RestaurantName { get; set; }
  
         public Cuisine CuisineName { get; set; } // property from Cuisine model

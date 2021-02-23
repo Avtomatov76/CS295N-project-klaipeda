@@ -55,6 +55,7 @@
                         <th scope="col">Rating</th>
                         <th scope="col">Price&#8727;</th>
                         <th scope="col">Link</th>
+                        <th scope="col" class="justify-content-center">Entry By</th> <!--added a column to specify who provided this entry-->
                         <th scope="col"></th>
                         <th scope="col"></th>
                     </tr>
@@ -65,22 +66,23 @@
                     {
                         foreach (Hotel hotel in Model)
                         {
-                            <tr>
-                                <th scope="row" class="text-muted">@hotel.HotelID</th>
-                                <td class="font-weight-bold">@hotel.HotelName</td>
-                                <td class="text-muted">@hotel.HotelAddress</td>
-                                <td>@hotel.HotelRating&#9733;</td>
-                                <td>&#36;@hotel.HotelPrice</td>
-                                <td class="text-info">@hotel.HotelLink</td>
-                                <td>
-                                    <a class="btn btn-outline-success" asp-action="Edit"
-                                       asp-route-id="@hotel.HotelID">Edit</a>
-                                </td>
-                                <td>
-                                    <a class="btn btn-outline-danger" asp-action="Delete"
-                                       asp-route-id="@hotel.HotelID">Delete</a>
-                                </td>
-                            </tr>
+                    <tr>
+                        <th scope="row" class="text-muted">@hotel.HotelID</th>
+                        <td class="font-weight-bold">@hotel.HotelName</td>
+                        <td class="text-muted">@hotel.HotelAddress</td>
+                        <td>@hotel.HotelRating&#9733;</td>
+                        <td>&#36;@hotel.HotelPrice</td>
+                        <td class="text-info">@hotel.HotelLink</td>
+                        <td class="text-dark">@hotel.Sender?.SenderName</td> <!--trying to add the user who supplied the entry-->
+                        <td>
+                            <a class="btn btn-outline-success" asp-action="Edit"
+                               asp-route-id="@hotel.HotelID">Edit</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-outline-danger" asp-action="Delete"
+                               asp-route-id="@hotel.HotelID">Delete</a>
+                        </td>
+                    </tr>
                         }
                     }
 

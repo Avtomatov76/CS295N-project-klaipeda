@@ -30,14 +30,19 @@ namespace KlaipedaCity
             services.AddTransient<IRestaurantRepository, RestaurantRepository>(); // Repo interface and repo class
             services.AddTransient<ICuisineRepository, CuisineRepository>();
             services.AddTransient<IHotelRepository, HotelRepository>();
+            services.AddTransient<IForumPost, ForumPostRepository>();
             
             services.AddControllersWithViews();
             services.AddDbContext<KlaipedaDbContext>(options =>
                 options.UseSqlServer(Configuration["Data:KlaipedaSite:ConnectionString"]));
 
             // Adding Identity
-            services.AddIdentity<AppUser, IdentityRole>()
-                .AddEntityFrameworkStores<KlaipedaDbContext>()
+            services.AddIdentity<AppUser, IdentityRole>(options =>
+            {
+                options.Password.RequiredLength = 6;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireDigit = true;
+            }).AddEntityFrameworkStores<KlaipedaDbContext>()
                 .AddDefaultTokenProviders();
 
             // ADD: code for useing caching management strategies

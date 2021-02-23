@@ -63,6 +63,7 @@
                     <th scope="col" class="text-justify">Rating</th>
                     <th scope="col" class="justify-content-center">Price&#8727;</th>
                     <th scope="col" class="justify-content-center">Link</th>
+                    <th scope="col" class="justify-content-center">Entry By</th> <!--added a column to specify who provided this entry-->
                     <th scope="col"></th>
                     <th scope="col"></th>
                 </tr>
@@ -73,23 +74,24 @@
                 {
                     foreach (Restaurant restaurant in Model)
                     {
-                        <tr>
-                            <th scope="row" class="text-muted">@restaurant.RestaurantID</th>
-                            <td class="font-weight-bold">@restaurant.RestaurantName</td>
-                            <td class="text-muted font-italic">@restaurant.CuisineName.CuisineName</td>
-                            <td class="text-muted">@restaurant.RestaurantDesc</td>
-                            <td>@restaurant.RestaurantRating&#9733;</td>
-                            <td>&#36;@restaurant.RestaurantPrice</td>
-                            <td class="text-info">@restaurant.RestaurantLink</td>
-                            <td>
-                                <a class="btn btn-outline-success" asp-action="Edit"
-                                   asp-route-id="@restaurant.RestaurantID">Edit</a>
-                            </td>
-                            <td>
-                                <a class="btn btn-outline-danger" asp-action="Delete"
-                                   asp-route-id="@restaurant.RestaurantID">Delete</a>
-                            </td>
-                        </tr>
+                <tr>
+                    <th scope="row" class="text-muted">@restaurant.RestaurantID</th>
+                    <td class="font-weight-bold">@restaurant.RestaurantName</td>
+                    <td class="text-muted font-italic">@restaurant.CuisineName.CuisineName</td>
+                    <td class="text-muted">@restaurant.RestaurantDesc</td>
+                    <td>@restaurant.RestaurantRating&#9733;</td>
+                    <td>&#36;@restaurant.RestaurantPrice</td>
+                    <td class="text-info">@restaurant.RestaurantLink</td>
+                    <td class="text-dark">@restaurant.Sender?.SenderName</td> <!--trying to add the user who supplied the entry-->
+                    <td>
+                        <a class="btn btn-outline-success" asp-action="Edit"
+                           asp-route-id="@restaurant.RestaurantID">Edit</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-outline-danger" asp-action="Delete"
+                           asp-route-id="@restaurant.RestaurantID">Delete</a>
+                    </td>
+                </tr>
                     }
                 }
 

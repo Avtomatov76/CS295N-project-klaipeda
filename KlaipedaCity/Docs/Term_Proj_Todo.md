@@ -1,5 +1,5 @@
 1. Add the remaining Identity classes
-2. Implement Identity Controllers
+2. CANNOT ADD A COMMENT -- NEEDS FIXING
 3. Add corresponding Views
 4. Add extra columns to Restaurant and Hotel classes to display AppUser username
 5. Run Migrations

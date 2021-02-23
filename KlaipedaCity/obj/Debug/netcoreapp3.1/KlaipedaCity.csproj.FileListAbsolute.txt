@@ -226,7 +226,6 @@ C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-k
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\obj\Debug\netcoreapp3.1\KlaipedaCity.csprojAssemblyReference.cache
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\obj\Debug\netcoreapp3.1\KlaipedaCity.AssemblyInfoInputs.cache
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\obj\Debug\netcoreapp3.1\KlaipedaCity.AssemblyInfo.cs
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\klaipedacity\obj\Debug\netcoreapp3.1\KlaipedaCity.csproj.CoreCompileInputs.cache
@@ -266,3 +265,12 @@ C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-k
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Account\AccessDenied.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Account\Register.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Add.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Forum.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Index.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.csprojAssemblyReference.cache
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Comment.cshtml.g.cs

@@ -1,4 +1,5 @@
 ﻿using KlaipedaCity.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace KlaipedaCity.Repos
         {
             get
             {
-                return context.Hotels; 
+                return context.Hotels.Include(h => h.Sender);
             }
         }
 
@@ -39,7 +40,8 @@ namespace KlaipedaCity.Repos
 
         public void UpdateHotel(Hotel h)
         {
-            var hotel = context.Hotels.Find(h.HotelID);
+            var hotel = context.Hotels.Include("Sender")
+                .Where(htl => htl.HotelID == h.HotelID).FirstOrDefault(); 
             // updating individual values
             hotel.HotelID = h.HotelID;
             hotel.HotelName = h.HotelName;
@@ -47,6 +49,7 @@ namespace KlaipedaCity.Repos
             hotel.HotelRating = h.HotelRating;
             hotel.HotelPrice = h.HotelPrice;
             hotel.HotelLink = h.HotelLink;
+            hotel.Sender.SenderName = h.Sender.SenderName;
 
             context.SaveChanges();
         }
