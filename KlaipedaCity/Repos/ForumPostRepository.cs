@@ -36,7 +36,7 @@ namespace KlaipedaCity.Repos
 
         public ForumPost GetForumPostBySubject(string subject)
         {
-            return  context.ForumPosts.Find(subject);
+            return context.ForumPosts.Find(subject);
         }
 
         public void UpdateForumPost(ForumPost post)

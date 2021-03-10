@@ -31,16 +31,17 @@ namespace KlaipedaCity.Controllers
             return View(posts);
         }
 
+        [HttpGet]
         public IActionResult Forum()
         {
             return View();
         }
 
-        [HttpGet]
-        public IActionResult Comment()
-        {
-            return View();
-        }
+        //[HttpGet]
+        //public IActionResult Comment()
+        //{
+        //    return View();
+        //}
 
         [HttpPost]
         public IActionResult Forum(ForumPost model) //CHECK IT
@@ -92,15 +93,15 @@ namespace KlaipedaCity.Controllers
             return View(posts);
         }
 
-        [Authorize]
+        //[Authorize]
         public IActionResult Comment(int postId)
         {
-            var commentVM = new CommentVM { PostID = postId };
+            var commentVM = new CommentVM { ForumPostID = postId };
             return View(commentVM);
         }
 
         [HttpPost]
-        public RedirectToActionResult Comment(CommentVM commentVM) // Open the form for entering a comment
+        public RedirectToActionResult Comment(CommentVM commentVM) 
         {
             // Comment is the domain model
             var comment = new Comment { CommentBody = commentVM.CommentBody };
@@ -110,7 +111,7 @@ namespace KlaipedaCity.Controllers
 
             // Retrieve the post this comment is for
             var post = (from p in repo.ForumPosts
-                           where p.ForumPostID == commentVM.PostID
+                           where p.ForumPostID == commentVM.ForumPostID
                            select p).First<ForumPost>();
 
             post.Comments.Add(comment);

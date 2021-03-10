@@ -272,5 +272,5 @@ C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-k
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Admin\Index.cshtml.g.cs
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Forum.cshtml.g.cs
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Index.cshtml.g.cs
-C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.csprojAssemblyReference.cache
 C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\Razor\Views\Forum\Comment.cshtml.g.cs
+C:\Users\rjand\Documents\School\WINTER_2021\CS296N\TERM PROJECT\CS295N-project-klaipeda\KlaipedaCity\obj\Debug\netcoreapp3.1\KlaipedaCity.csprojAssemblyReference.cache

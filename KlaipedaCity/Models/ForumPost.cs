@@ -8,7 +8,7 @@ namespace KlaipedaCity.Models
 {
     public class ForumPost
     {
-        private List<Comment> comments = new List<Comment>();
+        readonly private List<Comment> comments = new List<Comment>();
 
         public int ForumPostID { get; set; }
 

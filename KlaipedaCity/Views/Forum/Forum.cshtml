@@ -2,13 +2,28 @@
 @{
     ViewData["Title"] = "Post to Forum";
 }
+
+<head>
+    <link rel="stylesheet" href="~/css/custom.css" />
+</head>
+
 <div class="container">
     <header class="jumbotron">
-        <h1 class="display-4">Post to Forum</h1>
-        <p>Use this form to post to Forum</p>
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-xl-2">
+                    <img class="coat_arms" src="~/Content/Images/klaipeda_coat_arms.png" />
+                </div>
+                <div class="text-left col-xl-8 ml-5">
+                    <h1 class="jumbo_title">Post to Forum</h1>
+                </div>
+            </div>
+        </div>
     </header>
+</div>
 
-    <main>
+<body>
+    <div class="container">
         <div asp-validation-summary="All" class="text-danger"></div>
         <form asp-action="Forum" method="post">
 
@@ -28,5 +43,5 @@
                 <button type="submit" class="btn btn-primary col-sm-2 col-md-2 mt-3 pt-2 pb-2"><strong>Submit</strong></button>
             </div>
         </form>
-    </main>
-</div>
+    </div>
+</body>

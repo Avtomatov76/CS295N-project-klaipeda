@@ -7,7 +7,7 @@ namespace KlaipedaCity.Models
 {
     public class CommentVM
     {
-        public int PostID { get; set; }
+        public int ForumPostID { get; set; }
 
         public string PostSubject { get; set; }
 

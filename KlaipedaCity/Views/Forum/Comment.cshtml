@@ -1,6 +1,50 @@
-﻿@model Comment
+﻿@model CommentVM
 @{
     ViewData["Title"] = "Comment";
 }
 
-<h1>Your Comment info goes here...</h1>
+<head>
+    <link rel="stylesheet" href="~/css/custom.css" />
+</head>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-xl-2">
+                    <img class="coat_arms" src="~/Content/Images/klaipeda_coat_arms.png" />
+                </div>
+                <div class="text-left col-xl-8 ml-5">
+                    <h1 class="jumbo_title">Comment</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<body>
+    <div class="container mt-5">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <form method="post">
+            @*
+                <div class="row mb-2">
+                    <label asp-for="Sender.SenderName" class="control-label col-sm-2 col-md-2"><strong>Name of Sender</strong></label>
+                    <input asp-for="Sender.SenderName" class="form-control col-sm-8 col-md-6" />
+                    <span asp-validation-for="Sender.SenderName" class="text-danger"></span>
+                </div>
+            *@
+
+            <div class="row mb-2">
+                <label asp-for="CommentBody" class="control-label col-sm-2 col-md-2"><strong>Comment Body</strong></label>
+                <input asp-for="CommentBody" class="form-control col-sm-8 col-md-6 mb-8" /><br />
+                <span asp-validation-for="CommentBody" class="text-danger"></span>
+            </div>
+
+            <div><input type="hidden" asp-for="ForumPostID" /></div>
+
+            <div>
+                <button type="submit" class="btn btn-primary col-sm-2 col-md-2 mt-3 pt-2 pb-2"><strong>Submit</strong></button>
+            </div>
+        </form>
+    </div>
+</body>

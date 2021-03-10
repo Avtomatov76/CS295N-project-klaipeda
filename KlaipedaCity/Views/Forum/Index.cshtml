@@ -3,55 +3,80 @@
 @{
     ViewData["Title"] = "Forum Posts";
 }
-<!-- Have to change a bunch of stuff below -->
-<h1 class="display-4 mb-3">Filter Posts</h1>
-<form method="post" class="container">
-    <h5>Enter The Name of Sender:</h5>
-    <div class="row p-2">
-        <label for="Sender" class="custom-control-label col-md-1">Name of Sender</label>
-        <input name="Sender" class="form-control col-md-6" placeholder="Name" />
-    </div>
-    <h5>Enter Date Sent:</h5>
-    <div class="row p-2">
-        <label for="DateSent" class="custom-control-label col-md-1">Date Sent</label>
-        <input name="DateSent" class="form-control col-md-6" placeholder="mm/dd/yyyy" />
-    </div>
-    <div class="row p-2">
-        <button type="submit" class="form-control btn btn-primary col-1 mr-2 mb-3">Submit</button>
-        <a asp-action="ForumPosts" class="btn btn-danger col-1 mb-3">Reset</a>
-    </div>
-</form>
 
-@foreach (ForumPost post in Model)
-{
-    <p>
-        <strong class="m-3">Post Author:</strong>
-        @post.Sender.SenderName<br />
-        <strong class="m-3">Subject:</strong>
-        @post.Subject<br />
-        <strong class="m-3">Message Body:</strong>
-        @post.ForumPostBody<br />
-        <strong class="m-3">Date Sent:</strong>
-        @post.DateSent<br />
-        <br />
-    </p>
-    @if (post.Comments.Count != 0)
+<head>
+    <link rel="stylesheet" href="~/css/custom.css" />
+</head>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-xl-2">
+                    <img class="coat_arms" src="~/Content/Images/klaipeda_coat_arms.png" />
+                </div>
+                <div class="text-left col-xl-8 ml-5">
+                    <h1 class="jumbo_title">Forum</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<body>
+    <!-- Have to change a bunch of stuff below -->
+    <h4 class="ml-2 mb-3 text-muted">Filter Posts (by name or date)</h4>
+    <form method="post" class="container">
+        <div class="row p-2">
+            <input name="Sender" class="form-control col-md-2 mr-2" placeholder="Name" />
+            <input name="DateSent" class="form-control col-md-2" placeholder="mm/dd/yyyy" />
+        </div>
+        <div class="row p-2">
+            <button type="submit" class="form-control btn btn-success col-1 mr-2 mb-3 font-weight-bold">Submit</button>
+            <a asp-action="Index" class="btn btn-danger col-1 mb-5 font-weight-bold">Reset</a>
+        </div>
+    </form>
+
+    <h1 class="mt-3 mb-5 text-muted">Forum Posts</h1>
+
+    @foreach (ForumPost post in Model)
     {
-        <h3>Replies</h3>
+        <hr />
+        <p>
+            <h5><span class="m-3 text-muted">&#x23;  @post.ForumPostID</span></h5><br />
+            <strong class="m-3">Post Author:</strong>
+            @post.Sender.SenderName<br />
+            <strong class="m-3">Subject:</strong>
+            @post.Subject<br />
+            <strong class="m-3">Message Body:</strong>
+            @post.ForumPostBody<br />
+            <strong class="mt-3 mr-3 ml-3">Date Sent:</strong>
+            @post.DateSent<br />
+            <br />
+            <a asp-action="Comment" asp-route-postId="@post.ForumPostID" class="btn btn-outline-success col-auto pl-3 pr-3 ml-3 mb-3">Add A Comment</a>
+        </p>
 
-        @foreach (Comment comment in post.Comments)
-        {
-            <p>
-                <strong class="m-3">Comment:</strong>
-                @comment.CommentBody<br />
-                <strong class="m-3">By:</strong>
-                @comment.CommentAuthor.UserName<br /> <!--Places a username of the reply author here  -->
-                <strong class="m-3">Date:</strong>
-                @comment.CommentDate.Date<br />
-            </p>
-        }
+        <div class="container">
+            <div class="col-sm-6 col-sm-offset-3">
+                @if (post.Comments.Count != 0)
+                {
+                    <h4 class="ml-3 text-muted">Comments</h4>
 
+                    @foreach (Comment comment in post.Comments)
+                    {
+                        <p>
+                            <strong class="m-3">Comment:</strong>
+                            @comment.CommentBody<br />
+                            <strong class="m-3">By:</strong>
+                            @comment.CommentAuthor?.UserName<br /> <!--Places a username of the reply author here SENDER NAME -- CHECK THAT -->
+                            <strong class="m-3">Date:</strong>
+                            @comment.CommentDate.Date<br />
+                        </p>
+                    }
+
+                }
+            </div>
+        </div>
     }
-    <a asp-action="Comment" asp-route-messageId="@post.ForumPostID" class="btn btn-secondary col-3 mb-5">Add A Comment</a>
-
-}
+    <a asp-action="Forum" class="btn btn-success col-auto pl-3 pr-3 ml-3 mt-5 mb-3 font-weight-bold">New Post</a>
+</body>

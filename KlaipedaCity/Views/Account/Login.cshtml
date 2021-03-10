@@ -1,10 +1,27 @@
 ﻿@model LoginVM
 @{ ViewBag.Title = "Login"; }
 
-<h1>Login</h1>
+<head>
+    <link rel="stylesheet" href="~/css/custom.css" />
+</head>
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row pt-3 pb-3">
+                <div class="col-xl-2">
+                    <img class="coat_arms" src="~/Content/Images/klaipeda_coat_arms.png" />
+                </div>
+                <div class="text-left col-xl-8 ml-5">
+                    <h1 class="jumbo_title">Login</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-<form method="post" asp-action="Login"
+<form method="post" asp-action="Login" 
       asp-route-returnUrl="@Model.ReturnUrl">
     <div class="form-group row">
         <div class="col-sm-2"><label>Username</label></div>
