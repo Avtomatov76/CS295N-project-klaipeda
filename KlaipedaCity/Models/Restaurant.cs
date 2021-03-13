@@ -8,8 +8,6 @@ namespace KlaipedaCity.Models
 {
     public class Restaurant
     {
-        //public IEnumerable<Restaurant> GetRestaurants { get; set; }
-
         public int RestaurantID { get; set; } // primary key
 
         [Required(ErrorMessage = "Please enter a restaurant name.")]
@@ -18,10 +16,10 @@ namespace KlaipedaCity.Models
  
         public Cuisine CuisineName { get; set; } // property from Cuisine model
 
-        public AppUser Sender { get; set; } // adding a User's name who posted the restaurant, need new column
+        public AppUser Sender { get; set; } 
 
         [Required(ErrorMessage = "Please enter a description.")]
-        [StringLength(35, MinimumLength = 2, ErrorMessage = "The description should be between 4 and 255 characters long.")]
+        [StringLength(255, MinimumLength = 4, ErrorMessage = "The description should be between 4 and 255 characters long.")]
         public string RestaurantDesc { get; set; }
 
         [Range(1, 5, ErrorMessage = "Your entry should be between 1 and 5.")]
@@ -33,7 +31,7 @@ namespace KlaipedaCity.Models
         public int RestaurantPrice { get; set; }
 
         [Required(ErrorMessage = "Please enter a web address.")]
-        [StringLength(35, MinimumLength = 2, ErrorMessage = "Your entry should be between 5 and 65 characters long.")]
+        [StringLength(65, MinimumLength = 5, ErrorMessage = "Your entry should be between 5 and 65 characters long.")]
         public string RestaurantLink { get; set; }
     }
 }

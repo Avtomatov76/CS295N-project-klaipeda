@@ -22,7 +22,7 @@ namespace KlaipedaCity.Controllers
             userManager = u;
         }
 
-        //[Authorize] // FIX LOGIN AND REGISTER BEFORE PROCEEDING
+        [Authorize] 
         public IActionResult Index()
         {
             // get all the messages from the database
@@ -36,12 +36,6 @@ namespace KlaipedaCity.Controllers
         {
             return View();
         }
-
-        //[HttpGet]
-        //public IActionResult Comment()
-        //{
-        //    return View();
-        //}
 
         [HttpPost]
         public IActionResult Forum(ForumPost model) //CHECK IT
@@ -63,17 +57,17 @@ namespace KlaipedaCity.Controllers
             return Redirect("Index"); // displays all posts
         }
 
-        // Returns a search-by-name or by 'SentDate' result(s)
+        // Returns a search-by-subject or by 'SentDate' result(s)
         [HttpPost]
-        public IActionResult Index(string Sender, string DateSent)
+        public IActionResult Index(string subject, string DateSent)
         {
             List<ForumPost> posts = null;
 
-            if (Sender != null)
+            if (subject != null)
             {
                 posts = (from p in repo.ForumPosts
-                            where p.Sender.SenderName == Sender
-                            select p).ToList();
+                         where p.Subject.ToLower().Contains(subject)
+                         select p).ToList();
             }
             else if (DateSent != null)
             {
@@ -88,7 +82,7 @@ namespace KlaipedaCity.Controllers
                     select p).ToList();
             }
             else
-                return Redirect("Index");
+                return RedirectToAction("Index"); 
 
             return View(posts);
         }
@@ -120,10 +114,5 @@ namespace KlaipedaCity.Controllers
             return RedirectToAction("Index");
         }
 
-        //[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        //public IActionResult Error()
-        //{
-        //    return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        //}
     }
 }

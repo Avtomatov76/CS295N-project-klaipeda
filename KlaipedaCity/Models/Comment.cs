@@ -11,7 +11,8 @@ namespace KlaipedaCity.Models
         [Key]
         public int CommentID { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please write a comment.")]
+        [StringLength(65, MinimumLength = 4, ErrorMessage = "The comment should be between 4 and 255 characters long.")]
         public string CommentBody { get; set; }
 
         public DateTime CommentDate { get; set; }

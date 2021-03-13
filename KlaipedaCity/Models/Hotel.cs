@@ -10,7 +10,7 @@ namespace KlaipedaCity.Models
     {
         public int HotelID { get; set; }
 
-        public AppUser Sender { get; set; } // adding a User's name who posted the restaurant, need new column
+        public AppUser Sender { get; set; } 
 
         [Required(ErrorMessage = "Please enter a hotel name.")]
         [StringLength(35, MinimumLength = 2, ErrorMessage = "The name should be between 2 and 55 characters long.")]
