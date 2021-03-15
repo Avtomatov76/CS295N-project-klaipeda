@@ -4,14 +4,16 @@ using KlaipedaCity.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace KlaipedaCity.Migrations
 {
     [DbContext(typeof(KlaipedaDbContext))]
-    partial class KlaipedaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210313203455_MigrationUpdated")]
+    partial class MigrationUpdated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

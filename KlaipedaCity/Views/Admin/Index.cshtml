@@ -1,4 +1,4 @@
-﻿el AdminVM
+﻿@model AdminVM
 @{
     ViewData["Title"] = " | Manage Users";
 }
@@ -12,7 +12,7 @@
         <tr><th>Username</th><th>Roles</th><th></th><th></th><th></th></tr>
     </thead>
     <tbody>
-        @if (Model.Users.Count() == 0)
+        @if (Model.Users == null) // CHANGED CODE
         {
             <tr><td colspan="5">There are no user accounts.</td></tr>
         }
@@ -63,7 +63,7 @@
 
 <h1 class="mb-2">Manage Roles</h1>
 
-@if (Model.Roles.Count() == 0)
+@if (Model.Roles == null) // CHANGED CODE
 {
     <form method="post" asp-action="CreateAdminRole">
         <button type="submit" class="btn btn-primary">

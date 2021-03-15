@@ -31,19 +31,27 @@ namespace KlaipedaCity.Controllers
             if (ModelState.IsValid)
             {
                 var user = new AppUser { UserName = model.Username };
-                var result = await userManager.CreateAsync(user, model.Password);
-                if (result.Succeeded)
+
+                if (userManager.Users.Contains(user))
                 {
-                    await signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("Index", "Home");
+                    return RedirectToAction("Register", "Account");
                 }
                 else
                 {
-                    foreach (var error in result.Errors)
+                    var result = await userManager.CreateAsync(user, model.Password);
+                    if (result.Succeeded)
                     {
-                        ModelState.AddModelError("", error.Description);
+                        await signInManager.SignInAsync(user, isPersistent: false);
+                        return RedirectToAction("Index", "Home");
                     }
-                }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError("", error.Description);
+                        }
+                    }
+                }  
             }
             return View(model);
         }
@@ -91,6 +99,5 @@ namespace KlaipedaCity.Controllers
         {
             return View();
         }
-
     }
 }

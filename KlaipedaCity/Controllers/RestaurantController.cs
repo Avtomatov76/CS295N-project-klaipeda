@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using KlaipedaCity.Models;
 using KlaipedaCity.Repos;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace KlaipedaCity.Controllers
 {
@@ -57,6 +59,7 @@ namespace KlaipedaCity.Controllers
         }
 
         // GET: Restaurants/Add - Displays Add Restaurant form
+        [Authorize]
         public IActionResult Add()
         {
             return View();
@@ -76,6 +79,7 @@ namespace KlaipedaCity.Controllers
         }
 
         // GET: Restaurants/Edit/{id} - Displays EditRestaurant form for a particular restaurant
+        [Authorize]
         public IActionResult Edit(int id)
         {
             ViewBag.Action = "Edit";
@@ -106,6 +110,7 @@ namespace KlaipedaCity.Controllers
         }
 
         // GET: Restaurants/Edit/{id} - Displays Edit form for a particular restaurant
+        [Authorize]
         public IActionResult Delete(int id)
         {
             ViewBag.Action = "Delete";

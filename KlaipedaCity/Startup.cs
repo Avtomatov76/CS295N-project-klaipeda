@@ -45,7 +45,11 @@ namespace KlaipedaCity
             }).AddEntityFrameworkStores<KlaipedaDbContext>()
                 .AddDefaultTokenProviders();
 
-            // ADD: code for useing caching management strategies
+            // mitigating X-Frame-Options exploitation
+            services.AddAntiforgery(options =>
+            {
+                options.SuppressXFrameOptionsHeader = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -75,6 +79,8 @@ namespace KlaipedaCity
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            KlaipedaDbContext.CreateAdminUser(app.ApplicationServices).Wait();
 
             // ADD: Security mitigation code below
         }

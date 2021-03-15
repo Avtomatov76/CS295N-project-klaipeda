@@ -11,7 +11,6 @@ namespace KlaipedaCity.Models
         [Required(ErrorMessage = "Please enter Sender's name.")]
         [StringLength(25, MinimumLength = 2, ErrorMessage = "Sender's name should be between 2 and 25 characters long.")]
         public string SenderName { get; set; }
-        //public string RecipientName { get; set; }
 
         [NotMapped]
         public IList<string> RoleNames { get; set; }

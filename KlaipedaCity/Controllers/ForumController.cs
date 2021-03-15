@@ -87,7 +87,7 @@ namespace KlaipedaCity.Controllers
             return View(posts);
         }
 
-        //[Authorize]
+        [Authorize]
         public IActionResult Comment(int postId)
         {
             var commentVM = new CommentVM { ForumPostID = postId };
