@@ -34,7 +34,7 @@ namespace KlaipedaCity
             
             services.AddControllersWithViews();
             services.AddDbContext<KlaipedaDbContext>(options =>
-                options.UseSqlServer(Configuration["Data:KlaipedaSite:ConnectionString"]));
+                options.UseSqlServer(Configuration["Data:KlaipedaSiteOnline:ConnectionString"]));
 
             // Adding Identity
             services.AddIdentity<AppUser, IdentityRole>(options =>
