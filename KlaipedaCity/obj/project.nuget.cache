@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "fOpfQT4VQ+1ov3sa/b1a5NhZ0Gp1WUmWiyN9t4w6wU5L1XfpBDwTZZrnDDExDlDvynmEMUfDW3xe0H3FKWscNA==",
   "success": true,
   "projectFilePath": "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
-=======
-  "dgSpecHash": "byhTA9LvdCXp1wSOS2zFojXBcvrkabwn360YDkMEuJMi34D7pqV2QK5Fqfulase6CB9qO2kMh+TCuAeyBn/wbQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
->>>>>>> 08ebb4048b513c1a861c3f51f7f915215eecbd7a
   "expectedPackageFiles": [
     "C:\\Users\\rjand\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\rjand\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.0\\microsoft.bcl.hashcode.1.1.0.nupkg.sha512",
@@ -111,12 +105,5 @@
     "C:\\Users\\rjand\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\rjand\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  "logs": []
 }
