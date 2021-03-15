@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XJcEO4NpPDpVKEeKf1FHjX670i1y3tp7j/pBHaXB17V5lV+44oW8KsGdI6Yzqk/jiXV5sf5zZXZcbYvkw9G4bQ==",
+  "dgSpecHash": "K4vc906z4rYHEHEkTjTyDnMZ4JwemOwx06d47wtdwlcGaR6w2DOyEu24o/Ta17r15mFY1XgWxnWJryxdFuMjPA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
+  "projectFilePath": "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rjand\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\rjand\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",

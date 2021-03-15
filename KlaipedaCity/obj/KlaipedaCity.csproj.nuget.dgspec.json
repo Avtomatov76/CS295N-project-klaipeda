@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {}
+    "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {
+    "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
+        "projectUniqueName": "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
         "projectName": "KlaipedaCity",
-        "projectPath": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
+        "projectPath": "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\KlaipedaCity.csproj",
         "packagesPath": "C:\\Users\\rjand\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rjand\\Documents\\School\\WINTER_2021\\CS296N\\TERM PROJECT\\CS295N-project-klaipeda\\KlaipedaCity\\obj\\",
+        "outputPath": "C:\\Users\\rjand\\Documents\\School\\FALL2020\\CS 295N\\TERM PROJECT\\KlaipedaCity\\CS295N-project-klaipeda\\KlaipedaCity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rjand\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -41,7 +41,7 @@ namespace KlaipedaCity.Controllers
         public IActionResult Forum(ForumPost model) //CHECK IT
         {
             // Pulling the current user obj from the DB and use it as Sender obj
-            model.Sender = userManager.GetUserAsync(User).Result; // .Result IS short-circutting async methods (a little trick)
+            model.Sender = userManager.GetUserAsync(User).Result; // .Result IS short-circutting async methods (a little trick) 1111111111111111111111111111
             // TODO: get the user's real name in registration
             model.Sender.SenderName = model.Sender.UserName; // temporary hack
             model.DateSent = DateTime.Now;
@@ -99,7 +99,7 @@ namespace KlaipedaCity.Controllers
         {
             // Comment is the domain model
             var comment = new Comment { CommentBody = commentVM.CommentBody };
-            comment.CommentAuthor = userManager.GetUserAsync(User).Result; // .Result IS short-circutting async methods (a little trick)
+            comment.CommentAuthor = userManager.GetUserAsync(User).Result; // .Result IS short-circutting async methods (a little trick) 11111111111111111111
             //reply.ReplyAuthor.SenderName = reply.ReplyAuthor.UserName; // temporary hack
             comment.CommentDate = DateTime.Now;
 

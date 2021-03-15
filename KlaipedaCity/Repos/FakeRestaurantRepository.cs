@@ -35,7 +35,8 @@ namespace KlaipedaCity.Repos
                 RestaurantDesc = "Manto g. 12",
                 RestaurantRating = 5,
                 RestaurantPrice = 45,
-                RestaurantLink = "www.storaantis.lt"
+                RestaurantLink = "www.storaantis.lt",
+                Sender = new AppUser() { SenderName = "Chef Ramsey"}
             };
 
             // updating individual values
@@ -46,6 +47,7 @@ namespace KlaipedaCity.Repos
             oldRestaurant.RestaurantRating = restaurant.RestaurantRating;
             oldRestaurant.RestaurantPrice = restaurant.RestaurantPrice;
             oldRestaurant.RestaurantLink = restaurant.RestaurantLink;
+            oldRestaurant.Sender.SenderName = restaurant.Sender.SenderName;
 
             restaurants.Add(oldRestaurant);
         }
